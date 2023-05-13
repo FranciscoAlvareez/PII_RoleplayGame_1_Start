@@ -1,19 +1,19 @@
 using System;
 namespace Library
 {
-    public class Elfo
+    public class Elve
     {
         public string Name {get; set;}
         public int QuantityLife {get; set; }
 
-        public Elfo(string name, int life) 
+        public Elve(string name, int life) 
         {
             this.Name = name;
             this.QuantityLife = life;
         }
-        public void Cure(int cantidad) 
+        public void Cure(int Quantity) 
         {
-            QuantityLife += cantidad;
+            QuantityLife += Quantity;
             Console.WriteLine($"Se ha curado a {Name}, su estado de vida actual es {QuantityLife}");
         }
         public void HealCharacter(int cantidad, Dwarves character)
