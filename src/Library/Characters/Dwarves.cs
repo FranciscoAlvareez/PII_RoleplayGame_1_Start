@@ -5,13 +5,13 @@ namespace Library
     public class Dwarves
     {
         public string Name {get; set;}
-        public int Life {get; set;}
+        public int QuantityLife {get; set;}
 
         
-        public Dwarves(string name, int life)
+        public Dwarves(string name, int life) 
         {
             this.Name = name;
-            this.Life = life;
+            this.QuantityLife = life;
         }
 
         public void Cure(int Quantity) 

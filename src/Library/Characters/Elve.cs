@@ -19,7 +19,7 @@ namespace Library
         public void HealCharacter(int cantidad, Dwarves character)
         {
            character.Cure(cantidad);
-           Console.WriteLine($"{Name}ha curado al personaje {character.Name}, y acutalmente su estado de vida es: {character.Life}"); 
+           Console.WriteLine($"{Name}ha curado al personaje {character.Name}, y acutalmente su estado de vida es: {character.QuantityLife}"); 
         }
         /*
         public void ThrowArrow(Dwarves personaje)
