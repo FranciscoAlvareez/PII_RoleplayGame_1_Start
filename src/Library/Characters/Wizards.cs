@@ -1,16 +1,16 @@
 using System;
 
-namespace  Characters
+namespace  RoleplayGame
 {
     public class Wizard
     {
 
-        private int health = 100;
+        public int health = 100;
 
-        public Wizard(string name, int health)
+        public Wizard(string name)
         {
             this.Name = name;
-            this.health = health;
+            //this.health = health;
         }
 
         public string Name { get; set; }
@@ -18,19 +18,12 @@ namespace  Characters
         public int Attack { get; set; }
         public int Defense { get; set; }
 
-        // Para cuando tengamos una clase Personaje y poder usar Herencia
-        /*
-        public void Atacar(Personaje uno)
-        {
-            float var = (float)(uno.Vida - Math.Round((this.Daño)*(1-(uno.Defensa/500))));
-            uno.Vida = var;
-        }
-        */
+        
 
-        public void Attack(Personaje personaje, ItemMagico libro)
+        public void Attack(ICharacter personaje, ItemMagico libro)
         {
            // float var = (float)(Personaje.health - Math.Round((libro.Daño)*(1-(personaje.Defensa/500))));
-
+            float var = (float)(personaje.health - Math.Round((libro.Daño) - personaje.defense));
         }
 
 

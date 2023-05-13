@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace Characters
+namespace RoleplayGame
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Wizards Mago = Wizards("Steven Strange", 750);
+            //Wizards Mago = Wizards("Steven Strange", 750);
 
         }
     }
