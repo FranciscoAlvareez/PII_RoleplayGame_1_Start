@@ -6,7 +6,7 @@ namespace Library
     {
         static void Main(string[] args)
         {
-            Elfo Mielfo = new Elfo("Manuel", 100);
+            Elve Mielfo = new Elve("Manuel", 100);
             Dwarves MiDwarves = new Dwarves("Franchesco", 50);
         }
     }

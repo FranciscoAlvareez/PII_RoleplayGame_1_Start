@@ -14,10 +14,10 @@ namespace Library
             this.Life = life;
         }
 
-        public void Cure(int number)
+        public void Cure(int Quantity) 
         {
-            Life += number;
-            Console.WriteLine ($"{Name} se ha curado. Su vida acutal es: {Life}");
+            QuantityLife += Quantity;
+            Console.WriteLine($"Se ha curado a {Name}, su estado de vida actual es {QuantityLife}");
         }
 
         public void Attack()
