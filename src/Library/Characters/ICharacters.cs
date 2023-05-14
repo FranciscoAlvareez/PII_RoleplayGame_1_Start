@@ -7,7 +7,9 @@ namespace RoleplayGame
         public int QuantityLife {get; set;}
 
         public void Attack(ICharacter objetivo);
+        
 
+        public void Cure (int quantity);
 
 
     }

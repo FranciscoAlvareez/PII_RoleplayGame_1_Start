@@ -2,7 +2,7 @@ using System;
 
 namespace RoleplayGame
 {
-    public class Dwarves
+    public class Dwarves : ICharacter
     {
         public string Name {get; set;}
         public int QuantityLife { get; set; }
@@ -20,9 +20,10 @@ namespace RoleplayGame
             Console.WriteLine($"Se ha curado a {Name}, su estado de vida actual es {QuantityLife}");
         }
 
-        public void Attack()
+        public void Attack(ICharacter character)
         {
-            Console.WriteLine($"{Name} ataca");
+            Console.WriteLine($"El elfo {Name} ha atacdo a {character.Name}.");
+            
         }
     }
 }
