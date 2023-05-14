@@ -23,7 +23,7 @@ namespace  RoleplayGame
         public void Attack(ICharacter personaje, ItemMagico libro)
         {
            // float var = (float)(Personaje.health - Math.Round((libro.Daño)*(1-(personaje.Defensa/500))));
-            float var = (float)(personaje.health - Math.Round((libro.Daño) - personaje.defense));
+            float var = (float)(personaje.Quantity - Math.Round((libro.Daño) - personaje.defense));
         }
 
 

@@ -21,7 +21,7 @@ namespace RoleplayGame
             health += cantidad;
 =======
             QuantityLife += Quantity;
->>>>>>> 7c3b8acaa57d2bf988c19c563f42b19b8273167a:src/Library/Characters/Elve.cs
+
             Console.WriteLine($"Se ha curado a {Name}, su estado de vida actual es {QuantityLife}");
         }
         public void HealCharacter(int cantidad, Dwarves character)
