@@ -16,13 +16,8 @@ namespace Library
 
         public void Cure(int Quantity) 
         {
-<<<<<<< HEAD
-            QuantityLife += number;
-            Console.WriteLine ($"{Name} se ha curado. Su vida acutal es: {QuantityLife}");
-=======
             QuantityLife += Quantity;
-            Console.WriteLine($"Se ha curado a {Name}, su estado de vida actual es {QuantityLife}");
->>>>>>> 3e257014557c023b7a387082c76d654037878cd3
+            Console.WriteLine ($"{Name} se ha curado. Su vida acutal es: {QuantityLife}");
         }
 
         public void Attack()
