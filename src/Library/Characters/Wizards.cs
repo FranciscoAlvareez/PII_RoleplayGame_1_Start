@@ -53,16 +53,18 @@ namespace  RoleplayGame
 
         */
 
-        
-
-        public void Attack(ICharacter personaje, ItemMagico libro)
+        public void Attack(ICharacter personaje, ItemMagic libro)
         {
            // float var = (float)(Personaje.health - Math.Round((libro.Daño)*(1-(personaje.Defensa/500))));
-            float var = (float)(personaje.QuantityLife - Math.Round((libro.Damage) - personaje.QuantityLife));
+            float var = (float)(personaje.QuantityLife - Math.Round((libro.AttackValue) - personaje.QuantityLife));
         }
 
 
-        public void Cure();
+        public void Cure(int Quantity) 
+        {
+            QuantityLife += Quantity;
+            Console.WriteLine($"Se ha curado a {Name}, su estado de vida actual es {QuantityLife}");
+        }
 
     }
     

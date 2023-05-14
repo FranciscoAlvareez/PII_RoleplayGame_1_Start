@@ -1,3 +1,5 @@
+
+/*
 namespace RoleplayGame;
 
 public class ILibroMagico
@@ -8,3 +10,4 @@ public class ILibroMagico
     
 
 }
+*/

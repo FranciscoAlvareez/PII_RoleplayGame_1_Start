@@ -1,3 +1,6 @@
+
+
+/*
 namespace RoleplayGame;
 public class ItemMagico : ILibroMagico
 {
@@ -9,3 +12,4 @@ public class ItemMagico : ILibroMagico
 
     }
 }
+*/
