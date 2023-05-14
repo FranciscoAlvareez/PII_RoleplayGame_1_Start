@@ -5,19 +5,29 @@ namespace RoleplayGame
     public class Dwarves
     {
         public string Name {get; set;}
+
         public int health {get; set;}
 
+        //public int QuantityLife {get; set;}
+
         
-        public Dwarves(string name, int life)
+        public Dwarves(string name) 
         {
             this.Name = name;
-            this.health = life;
         }
 
-        public void Cure(int number)
+        public void Cure(int number) 
         {
             health += number;
             Console.WriteLine ($"{Name} se ha curado. Su vida acutal es: {health}");
+
+
+            QuantityLife += number;
+            Console.WriteLine ($"{Name} se ha curado. Su vida acutal es: {QuantityLife}");
+
+            QuantityLife += Quantity;
+            Console.WriteLine($"Se ha curado a {Name}, su estado de vida actual es {QuantityLife}");
+
         }
 
         public void Attack()
