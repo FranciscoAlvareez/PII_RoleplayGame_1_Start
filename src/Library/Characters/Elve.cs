@@ -11,11 +11,7 @@ namespace RoleplayGame
             this.Name = name;
             this.QuantityLife = life;
         }
-        public void Cure(int Quantity) 
-        {
-            QuantityLife += Quantity;
-            Console.WriteLine($"Se ha curado a {Name}, su estado de vida actual es {QuantityLife}");
-        }
+        
         public void HealCharacter(ICharacter character, int cantidad)
         {
            character.Cure(cantidad);
@@ -34,8 +30,18 @@ namespace RoleplayGame
             personaje.Life -= 20;
         }
         */
-        
-
+        public void Cure(int Quantity) 
+        {
+            if (Quantity <= 1000)
+            {
+                QuantityLife += Quantity;
+                Console.WriteLine($"Se ha curado a {Name}, su estado de vida actual es {QuantityLife}");
+            }
+            else
+            {
+                Console.WriteLine("La cantidad que desea curar excede los limites de curación.");
+            }
+        }
 
     }
 }

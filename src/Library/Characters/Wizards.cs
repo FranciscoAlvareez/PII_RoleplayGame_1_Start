@@ -19,8 +19,8 @@ namespace  RoleplayGame
 
         public void AddObjects(ItemMagic item)
         {
-            this.Inventory.Add(item);
-            if (item.DefenseValue > 0)
+            this.Inventory.Add(item);       // Añado al inventario.
+            if (item.DefenseValue > 0)      // Si el valor de defenza del item es mayor a cero, se lo sumo a la vida del mago.
             {
                 this.QuantityLife += item.DefenseValue;
             }
@@ -44,26 +44,19 @@ namespace  RoleplayGame
             personaje.QuantityLife -= damage; // Le resta a la vida del personaje escogido, el daño.
             Console.WriteLine($"{personaje} ha recibido {damage} daño.");
         }
-
-        /*
-        public void Defense(ItemMagic libro)
-        {
-            return QuantityLife + libro.defenza;              
-        }                                           
-
-        */
-
-        public void Attack(ICharacter personaje, ItemMagic libro)
-        {
-           // float var = (float)(Personaje.health - Math.Round((libro.Daño)*(1-(personaje.Defensa/500))));
-            float var = (float)(personaje.QuantityLife - Math.Round((libro.AttackValue) - personaje.QuantityLife));
-        }
-
-
+                        
+      
         public void Cure(int Quantity) 
         {
-            QuantityLife += Quantity;
-            Console.WriteLine($"Se ha curado a {Name}, su estado de vida actual es {QuantityLife}");
+            if (Quantity <= 1000)
+            {
+                QuantityLife += Quantity;
+                Console.WriteLine($"Se ha curado a {Name}, su estado de vida actual es {QuantityLife}");
+            }
+            else
+            {
+                Console.WriteLine("La cantidad que desea curar excede los limites de curación.");
+            }
         }
 
     }
