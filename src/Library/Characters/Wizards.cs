@@ -2,7 +2,7 @@ using System;
 
 namespace  RoleplayGame
 {
-    public class Wizard
+    public class Wizard : ICharacter
     {
 
         public int QuantityLife = 100;
@@ -23,12 +23,13 @@ namespace  RoleplayGame
         public void Attack(ICharacter personaje, ItemMagico libro)
         {
            // float var = (float)(Personaje.health - Math.Round((libro.Daño)*(1-(personaje.Defensa/500))));
-            float var = (float)(personaje.QuantityLife - Math.Round((libro.Daño) - personaje.defense));
+            float var = (float)(personaje.QuantityLife - Math.Round((libro.Damage) - personaje.QuantityLife));
         }
 
         public void Defense()
 
 
+        
 
         public void Cure()
         {
