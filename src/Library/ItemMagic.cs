@@ -31,23 +31,5 @@ namespace RoleplayGame
             }
         }
 
-        /*
-        public void GetArmaduras()
-        {
-            Console.WriteLine("Las armaduras disponibles son: ");
-            foreach (string defensa in Armaduras)
-            {
-                Console.WriteLine(defensa);
-            }
-        }
-        public void GetArmas()
-        {
-            Console.WriteLine("Las armas disponibles son: ");
-            foreach (string arma in Armas)
-            {
-                Console.WriteLine(arma);
-            }
-        }
-        */    
     }
 }
