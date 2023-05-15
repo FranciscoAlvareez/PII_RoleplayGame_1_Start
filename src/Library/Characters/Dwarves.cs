@@ -1,11 +1,11 @@
 using System;
 
-namespace Library
+namespace RoleplayGame
 {
     public class Dwarves
     {
         public string Name {get; set;}
-        public int QuantityLife {get; set;}
+        public int QuantityLife { get; set; }
 
         
         public Dwarves(string name, int life) 

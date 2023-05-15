@@ -1,5 +1,5 @@
 using System;
-namespace Library
+namespace RoleplayGame
 {
     public class Elve
     {
@@ -16,7 +16,7 @@ namespace Library
             QuantityLife += Quantity;
             Console.WriteLine($"Se ha curado a {Name}, su estado de vida actual es {QuantityLife}");
         }
-        public void HealCharacter(int cantidad, Dwarves character)
+        public void HealCharacter(Dwarves character, int cantidad)
         {
            character.Cure(cantidad);
            Console.WriteLine($"{Name}ha curado al personaje {character.Name}, y acutalmente su estado de vida es: {character.QuantityLife}"); 
