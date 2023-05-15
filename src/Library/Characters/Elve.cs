@@ -5,6 +5,7 @@ namespace RoleplayGame
     {
         public string Name {get; set;}
         public int QuantityLife {get; set; }
+        public Item Weapon {get; set; }
 
         public Elve(string name, int life) 
         {
@@ -18,10 +19,19 @@ namespace RoleplayGame
            Console.WriteLine($"{Name}ha curado al personaje {character.Name}, y acutalmente su estado de vida es: {character.QuantityLife}"); 
         }
 
-        public void Attack(ICharacter character)
+        public void AttackWeapon(ICharacter character)
         {
-            Console.WriteLine($"El elfo {Name} ha atacdo a {character.Name}.");
-            
+            Console.WriteLine($"El Personaje {Name} ha atacado a {character.Name}.");
+           if (Weapon !=null)
+
+           {
+            int damage = Weapon.Ataque;
+            character.Cure(-damage);
+           }
+           else
+           {
+            Console.WriteLine ($"El personaje no tiene arma");
+           }  
         }
         
         /*

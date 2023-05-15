@@ -14,6 +14,7 @@ namespace  RoleplayGame
 
         public string Name { get; set; }
         public int QuantityLife { get; set; }
+        public Item Weapon {get; set; }
     
         private List<ItemMagic> Inventory; // Se le agregan los conocimientos de magia o items (Baston) que haya adquirido
 
@@ -25,6 +26,20 @@ namespace  RoleplayGame
                 this.QuantityLife += item.DefenseValue;
             }
         }   
+        public void AttackWeapon(ICharacter character)
+        {
+            Console.WriteLine($"El Personaje {Name} ha atacado a {character.Name}.");
+           if (Weapon !=null)
+
+           {
+            int damage = Weapon.Ataque;
+            character.Cure(-damage);
+           }
+           else
+           {
+            Console.WriteLine ($"El personaje no tiene arma");
+           }  
+        }
 
         public void Attack(ICharacter personaje)
         {
@@ -44,6 +59,7 @@ namespace  RoleplayGame
             personaje.QuantityLife -= damage; // Le resta a la vida del personaje escogido, el daño.
             Console.WriteLine($"{personaje} ha recibido {damage} daño.");
         }
+        
                         
       
         public void Cure(int Quantity) 
