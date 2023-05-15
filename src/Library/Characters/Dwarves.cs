@@ -8,7 +8,6 @@ namespace RoleplayGame
         public int QuantityLife { get; set; }
         public Item Weapon { get; set; }
  
-        
         public Dwarves(string name, int life) 
         {
             this.Name = name;
@@ -18,16 +17,15 @@ namespace RoleplayGame
          public void AttackWeapon(ICharacter character)
         {
             Console.WriteLine($"El Personaje {Name} ha atacado a {character.Name}.");
-           if (Weapon !=null)
-
-           {
-            int damage = Weapon.Ataque;
-            character.Cure(-damage);
-           }
-           else
-           {
-            Console.WriteLine ($"El personaje no tiene arma");
-           }  
+            if (Weapon !=null)
+            {
+                int damage = Weapon.Ataque;
+                character.Cure(-damage);
+            }
+            else
+            {
+                Console.WriteLine ($"El personaje no tiene arma.");
+            }  
         }
 
         public void Cure(int Quantity) 
@@ -35,7 +33,7 @@ namespace RoleplayGame
             if (Quantity <= 1000)
             {
                 QuantityLife += Quantity;
-                Console.WriteLine($"Se ha curado a {Name}, su estado de vida actual es {QuantityLife}");
+                Console.WriteLine($"Se ha curado a {Name}, su estado de vida actual es {QuantityLife}.");
             }
             else
             {

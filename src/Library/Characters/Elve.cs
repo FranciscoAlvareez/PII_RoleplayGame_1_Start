@@ -18,7 +18,7 @@ namespace RoleplayGame
         public void HealCharacter(ICharacter character, int cantidad)
         {
            character.Cure(cantidad);
-           Console.WriteLine($"{Name}ha curado al personaje {character.Name}, y acutalmente su estado de vida es: {character.QuantityLife}"); 
+           Console.WriteLine($"{Name}ha curado al personaje {character.Name}, y acutalmente su estado de vida es: {character.QuantityLife}."); 
         }
 
         public void AttackWeapon(ICharacter character)
@@ -32,22 +32,16 @@ namespace RoleplayGame
            }
            else
            {
-            Console.WriteLine ($"El personaje no tiene arma");
+            Console.WriteLine ($"El personaje no tiene arma.");
            }  
         }
         
-        /*
-        public void ThrowArrow(Dwarves personaje)
-        {
-            personaje.Life -= 20;
-        }
-        */
         public void Cure(int Quantity) 
         {
             if (Quantity <= 1000)
             {
                 QuantityLife += Quantity;
-                Console.WriteLine($"Se ha curado a {Name}, su estado de vida actual es {QuantityLife}");
+                Console.WriteLine($"Se ha curado a {Name}, su estado de vida actual es {QuantityLife}.");
             }
             else
             {
