@@ -1,4 +1,4 @@
-namespace Library;
+namespace RoleplayGame;
 using System;
 using System.Collections.Generic;
 public class Item
@@ -39,3 +39,9 @@ public class Item
         }
     }
 }
+
+
+/*
+Item espada = new Item("Espada", 30)
+Item escudo = new Item("Escudo", 15, true);
+*/
