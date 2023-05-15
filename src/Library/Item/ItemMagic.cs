@@ -22,7 +22,8 @@ namespace RoleplayGame
         public int DefenseValue { get; set; }
 
         private List<string> Dex;       // Lugar provisional para guardar los nombres de los items
-       // private List<ItemMagic> Inventory;
+        
+        // private List<ItemMagic> Inventory;
         // Quiero que despues de que un item magico se cree, se pueda guardar en una lista 
         
         public void GetItems()
