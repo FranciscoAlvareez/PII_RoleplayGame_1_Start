@@ -1,6 +1,7 @@
 using NUnit.Framework;
 
 
+
 namespace RoleplayGame
 {
     public class WizardsTest
