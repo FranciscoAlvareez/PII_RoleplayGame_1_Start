@@ -15,10 +15,19 @@ namespace RoleplayGame
             this.QuantityLife = life;
         }
 
-        public void AttackWeapon(ICharacter character)
+         public void AttackWeapon(ICharacter character)
         {
-            QuantityLife += Quantity;
-            Console.WriteLine ($"{Name} se ha curado. Su vida acutal es: {QuantityLife}");
+            Console.WriteLine($"El Personaje {Name} ha atacado a {character.Name}.");
+           if (Weapon !=null)
+
+           {
+            int damage = Weapon.Ataque;
+            character.Cure(-damage);
+           }
+           else
+           {
+            Console.WriteLine ($"El personaje no tiene arma");
+           }  
         }
 
         public void Cure(int Quantity) 
