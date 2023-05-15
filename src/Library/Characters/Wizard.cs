@@ -25,7 +25,9 @@ namespace  RoleplayGame
             {
                 this.QuantityLife += item.DefenseValue;
             }
-        }   
+        }
+        
+         
         public void AttackWeapon(ICharacter character)
         {
             Console.WriteLine($"El Personaje {Name} ha atacado a {character.Name}.");
@@ -39,6 +41,7 @@ namespace  RoleplayGame
                 Console.WriteLine ($"El personaje no tiene arma");
             }  
         }
+    
 
         public void Attack(ICharacter personaje)
         {
