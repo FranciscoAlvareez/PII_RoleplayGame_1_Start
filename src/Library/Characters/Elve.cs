@@ -3,8 +3,8 @@ namespace RoleplayGame
 {
     public class Elve : ICharacter
     {
-        public string Name {get; set;}
-        public int QuantityLife {get; set; }
+        public string Name { get; set;}
+        public int QuantityLife { get; set; }
 
         public Elve(string name, int life) 
         {

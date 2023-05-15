@@ -6,13 +6,6 @@ namespace RoleplayGame
 {
     public class ItemMagic
     {
-        public string Type { get; set; }
-        public string Name { get; set; }
-        public int AttackValue { get; set; }
-        public int DefenseValue { get; set; }
-
-        private List<string> Dex; // Lugar provisional para guardar los nombres de los items
-        private List<ItemMagic> Inventory;
         public ItemMagic(string type, string name, int powerAttack, int powerDefense)
         {
             this.Type = type;
@@ -22,6 +15,14 @@ namespace RoleplayGame
             this.Dex.Add(name);     // No se si esta, está correcto
         }
         
+
+        public string Type { get; set; }
+        public string Name { get; set; }
+        public int AttackValue { get; set; }
+        public int DefenseValue { get; set; }
+
+        private List<string> Dex;       // Lugar provisional para guardar los nombres de los items
+       // private List<ItemMagic> Inventory;
         // Quiero que despues de que un item magico se cree, se pueda guardar en una lista 
         
         public void GetItems()
