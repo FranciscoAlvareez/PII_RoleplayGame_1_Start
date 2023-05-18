@@ -14,24 +14,21 @@ namespace  RoleplayGame
 
         public string Name { get; set; }
         public int QuantityLife { get; set; }
-        public Item Weapon {get; set; }
+        public Item Weapon { get; set; }
     
-        private List<ItemMagic> Inventory; // Se le agregan los conocimientos de magia o items (Baston) que haya adquirido
+        private List<ItemMagic> Inventory = new List<ItemMagic>(); // Se le agregan los conocimientos de magia o items (Baston) que haya adquirido
 
         public void AddObjects(ItemMagic item)
         {
             this.Inventory.Add(item);       // Añado al inventario.
-            if (item.DefenseValue > 0)      // Si el valor de defenza del item es mayor a cero, se lo sumo a la vida del mago.
-            {
-                this.QuantityLife += item.DefenseValue;
-            }
+            
         }
         
          
         public void AttackWeapon(ICharacter character)
         {
             Console.WriteLine($"El Personaje {Name} ha atacado a {character.Name}.");
-            if (Weapon !=null)
+            if (Weapon != null)
             {
                 int damage = Weapon.Ataque;
                 character.Cure(-damage);
@@ -47,12 +44,13 @@ namespace  RoleplayGame
         {
             int damage = 0;
             
-            // float var = (float)(Personaje.health - Math.Round((libro.Daño)*(1-(personaje.Defensa/500))));
-            //float var = (float)(personaje.QuantityLife - Math.Round(libro.Daño));
-            
             foreach (ItemMagic items in Inventory)
             {
                 damage += items.AttackValue;         // Sumo el valor de ataque de los objetos que tiene el mago.
+                if (items.DefenseValue > 0)      // Si el valor de defenza del item es mayor a cero, se lo sumo a la vida del mago.
+                {
+                    personaje.QuantityLife += items.DefenseValue;
+                }
             }
 
             if (damage == 0)      // Si el mago no tiene ningun item/conocimiento, el daño será 0.
